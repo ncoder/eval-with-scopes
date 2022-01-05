@@ -1,0 +1,23 @@
+{
+  "name": "eval-with-scopes",
+  "version": "1.0.0",
+  "description": "eval takes muliple stacked scope objects as arguments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncoder/eval-with-scopes.git"
+  },
+  "keywords": [
+    "eval",
+    "scope"
+  ],
+  "author": "Nicolas Coderre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncoder/eval-with-scopes/issues"
+  },
+  "homepage": "https://github.com/ncoder/eval-with-scopes#readme"
+}
