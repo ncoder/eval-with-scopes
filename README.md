@@ -10,3 +10,6 @@ function private() {
 }
 
 ```
+
+Also, we prove a evalWithScopesNoWith that can run under 'strict' mode.
+
