@@ -13,6 +13,10 @@ function evalWithScopes(expr, ...scopes) {
     return eval(expr);
 }
 
+const reserved= {
+    "false" : "_false",
+    "true" : "_true"
+}
 /**
  *
  * @param {string} expr
@@ -21,10 +25,11 @@ function evalWithScopes(expr, ...scopes) {
  */
 function evalWithScopesNoWith(expr, ...scopes) {
     for (let i = scopes.length - 1; i >= 0; i--) {
-        expr = `{ const { ${Object.keys(scopes[i]).join(",")} } = scopes[${i}]; ${expr} }`;
+        expr = `{ const { ${Object.keys(scopes[i]).map(k => reserved[k] ?? k).join(",")} } = scopes[${i}]; ${expr} }`;
     }
     return eval(expr);
 }
 
 exports.evalWithScopes = evalWithScopes;
 exports.evalWithScopesNoWith = evalWithScopesNoWith;
+exports.reserved = reserved
